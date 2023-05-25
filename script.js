@@ -57,6 +57,7 @@ const parseInT = parseInt(newM);
 // console.log(typeof parseInT);
 //////////////////////////////////////
 
+/*
 //////////////////////////////////////
 //array
 // const cars = new Array(["Saab", "Volvo", "BMW", "Audi"]);
@@ -94,21 +95,66 @@ const parseInT = parseInt(newM);
 // const myChildren = myGirls.concat(myBoys, myFruits);
 // console.log(myChildren);
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
-const sortFruits = fruits.sort();
-console.log(sortFruits);
+// const sortFruits = fruits.sort();
+// console.log(sortFruits);
 
-const sortReverse = fruits.reverse();
-console.log(sortReverse);
+// const sortReverse = fruits.reverse();
+// console.log(sortReverse);
 
-const cars = [
-  { type: "Volvo", year: 2016 },
-  { type: "Saab", year: 2001 },
-  { type: "BMW", year: 2010 },
-];
+// const cars = [
+//   { type: "Volvo", year: 2016 },
+//   { type: "Saab", year: 2001 },
+//   { type: "BMW", year: 2010 },
+// ];
 
-const hm = cars.sort(function (a, b) {
-  return a.year - b.year;
-});
-console.log(hm);
+// const hm = cars.sort(function (a, b) {
+//   return a.year - b.year;
+// });
+// console.log(hm);
+
+const numbers = [45, 4, 9, 16, 25];
+
+const myFunc = function (value, index, array) {
+  // return value > 10;
+  return value > 20;
+  // console.log("value:", value * 2);
+  // console.log("index:", index);
+  // console.log("array:", array);
+};
+
+//forEach
+numbers.forEach(myFunc);
+
+//mapping
+const newMap = numbers.map(myFunc);
+console.log(newMap);
+
+//filter
+const newFilter = numbers.filter(myFunc);
+console.log(newFilter);
+
+//reduce
+// const number2 = [45, 4, 9, 16, 25];
+
+// const myFunc2 = function (total, value, index, array) {
+//   return total + value;
+// };
+
+// const reduceTotal = number2.reduce(myFunc2, 10);
+// console.log(reduceTotal);
+
+//every
+const newEvery = numbers.every(myFunc);
+console.log(newEvery);
+
+//some
+const newSome = numbers.some(myFunc);
+console.log(newSome);
+
+//find
+const newFindIndex = numbers.findIndex(myFunc);
+console.log(newFindIndex);
+//////////////////////////////////////
+*/
