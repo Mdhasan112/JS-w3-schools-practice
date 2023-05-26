@@ -158,3 +158,90 @@ const newFindIndex = numbers.findIndex(myFunc);
 console.log(newFindIndex);
 //////////////////////////////////////
 */
+
+//////////////////////////////////////
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const randomValue = getRndInteger(10, 20);
+console.log(randomValue);
+
+//////////////////////////////////////
+//Problem solving
+//1.
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(getRndInteger(1, 6));
+
+//2.
+const students = ["nayem", "asad", "rakib", "nayan"];
+console.log(students.sort());
+
+//3.
+const numbers = [5, 2, 10, 1, 8];
+
+// Sorting the array in ascending order
+const roll_numbers = numbers.sort(function (a, b) {
+  return a - b;
+});
+console.log(roll_numbers);
+
+//4.
+const isLeapYear = function (year) {
+  if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+    console.log(`${year} is a leap year`);
+  } else {
+    console.log(`${year} is not a leap year`);
+  }
+};
+isLeapYear(2016);
+
+//5.
+const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+
+const countVowels = function (sentence) {
+  count = 0;
+  const letters = Array.from(sentence);
+
+  letters.forEach(function (value, index, array) {
+    if (vowels.includes(value)) {
+      count++;
+    }
+  });
+
+  return count;
+};
+
+console.log(countVowels("I love Bangladesh"));
+
+//6.
+const array = [1, 2, 3, 4, 4, 5, 6, 6];
+
+const duplicates = array.filter(function (value, index, array) {
+  return array.indexOf(value) !== index;
+
+  //unique value
+  //return array.indexOf(value) === index;
+});
+
+console.log(duplicates);
+
+// function extractDuplicates(array) {
+//   const duplicates = [];
+//   const uniqueValues = new Set();
+
+//   array.forEach(function (value) {
+//     if (uniqueValues.has(value)) {
+//       duplicates.push(value);
+//     } else {
+//       uniqueValues.add(value);
+//     }
+//   });
+//   return duplicates;
+// }
+
+// const array = [1, 2, 3, 4, 4, 5, 6, 6];
+// const duplicateElements = extractDuplicates(array);
+// console.log(duplicateElements);
