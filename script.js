@@ -159,6 +159,7 @@ console.log(newFindIndex);
 //////////////////////////////////////
 */
 
+/*
 //////////////////////////////////////
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -245,3 +246,119 @@ console.log(duplicates);
 // const array = [1, 2, 3, 4, 4, 5, 6, 6];
 // const duplicateElements = extractDuplicates(array);
 // console.log(duplicateElements);
+//////////////////////////////////////
+*/
+
+// let age = "skdjg";
+
+// if (age >= 18) {
+//   console.log("you are adult");
+// } else {
+//   console.log("You are picci");
+// }
+
+// const result =
+//   age >= 18
+//     ? age < 30
+//       ? "You are adult"
+//       : "you are buira"
+//     : "You are not adult";
+// console.log(result);
+
+// age = Number(age);
+
+// if (isNaN(age)) {
+//   console.log("Input is not a number");
+// } else {
+//   console.log(age <= 18 ? "you  are young" : "you are too old");
+// }
+
+//else if conditions
+////////////////////////////////////
+
+// let age = 30;
+
+// age = Number(age);
+
+// if (age < 18) {
+//   console.log("you are young");
+// } else if (age == 18) {
+//   console.log("welcome adult");
+// } else if (age > 18 && age < 30) {
+//   console.log("you are matured");
+// } else {
+//   console.log("you are too old");
+// }
+////////////////////////////////////
+
+//loop for in
+// const person = { fname: "John", lname: "Doe", age: 25 };
+// for (const key in person) {
+//   console.log(person[key]);
+// }
+
+// //loop for of
+// const names = "hasan";
+
+// for (const name of names) {
+//   console.log(name);
+// }
+////////////////////////////////////
+// //break
+// for (let i = 0; i < 10; i++) {
+//   if (i === 3) {
+//     break;
+//   }
+//   console.log(`number is ${i}`);
+// }
+
+//continue
+// for (let i = 0; i < 10; i++) {
+//   if (i === 3) {
+//     continue;
+//   }
+//   console.log(`number is ${i}`);
+// }
+////////////////////////////////////
+
+// //set
+// const mySet = new Set();
+
+// mySet.add("hasan");
+// mySet.add("Raja");
+// mySet.add("Delmar");
+// console.log(mySet);
+
+// let sum = 0;
+// const numbers = [65, 44, 12, 4];
+// numbers.forEach(myFunction);
+
+// function myFunction(item) {
+//   sum += item;
+// }
+
+// console.log(sum);
+
+////////////////////////////////////
+//maps
+// const fruits = new Map([
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200],
+// ]);
+
+// fruits.set("malta", 200);
+// console.log(fruits);
+// console.log(fruits.size);
+// console.log(fruits.get("apples"));
+// console.log(fruits.has("apples"));
+
+// fruits.forEach(function (value, key) {
+//   console.log(key, "=", value);
+// });
+
+////////////////////////////////////
+let text = "Visit W3Schools!";
+let n = text.search("W3Schools");
+
+console.log(n);
