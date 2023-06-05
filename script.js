@@ -43,15 +43,15 @@ const hk = function () {
 
 //////////////////////////////////////
 //Number
-const x = 500;
-const y = new Number(500);
+// const x = 500;
+// const y = new Number(500);
 
-// console.log(y);
+// // console.log(y);
 
-let m = new Number(120);
-const newM = m.toString();
-const fixed = m.toFixed();
-const parseInT = parseInt(newM);
+// let m = new Number(120);
+// const newM = m.toString();
+// const fixed = m.toFixed();
+// const parseInT = parseInt(newM);
 
 // console.log(typeof newM);
 // console.log(typeof parseInT);
@@ -358,7 +358,43 @@ console.log(duplicates);
 // });
 
 ////////////////////////////////////
-let text = "Visit W3Schools!";
-let n = text.search("W3Schools");
+// let x = 12;
+// try {
+//   // if (x.trim() == "") throw "empty";
+//   if (isNaN(x)) throw "not a number";
+//   x = Number(x);
+//   if (x < 5) throw "too low";
+//   if (x > 10)
+//     throw {
+//       message: "too high",
+//       name: "highError",
+//     };
+// } catch (err) {
+//   console.log(err);
+// }
+////////////////////////////////////
+//Hoisting
+// x = 5;
+// console.log(x, y);
+// var x;
+// var y = 7;
+////////////////////////////////////
+//this
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   id: 5566,
+//   fullName: function () {
+//     return this.firstName + " " + this.lastName;
+//   },
+//   getFullName: function () {
+//     return this.firstName + " " + this.lastName;
+//   },
+// };
 
-console.log(n);
+// person2 = {
+//   firstName: "Hasan",
+//   lastName: "Khan",
+// };
+// console.log(person.getFullName.call(person2));
+////////////////////////////////////
