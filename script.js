@@ -398,3 +398,24 @@ console.log(duplicates);
 // };
 // console.log(person.getFullName.call(person2));
 ////////////////////////////////////
+//js classes
+
+// class Car {
+//   constructor(name, model) {
+//     this.name = name;
+//     this.model = model;
+//   }
+//   carFeatures(brand) {
+//     console.log(`${this.name} is a adventures ${brand}`);
+//   }
+// }
+
+// const car1 = new Car("BMW", "X5");
+// const car2 = new Car("Audi", "f51");
+// const car3 = new Car("Suzuki", "C1");
+// console.log(car2);
+
+// car1.carFeatures("brand");
+// car2.carFeatures("brand");
+// car3.carFeatures("brand");
+////////////////////////////////////
