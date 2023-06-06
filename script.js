@@ -419,3 +419,22 @@ console.log(duplicates);
 // car2.carFeatures("brand");
 // car3.carFeatures("brand");
 ////////////////////////////////////
+//json to obj
+// let text =
+//   '{ "employees" : [' +
+//   '{ "firstName":"John" , "lastName":"Doe" },' +
+//   '{ "firstName":"Anna" , "lastName":"Smith" },' +
+//   '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+// const obj = JSON.parse(text);
+// console.log(obj.employees[0].firstName);
+
+// //obj to json
+// const text2 = {
+//   name: "hasan khan",
+//   age: 25,
+//   profession: "web developer",
+// };
+
+// console.log(JSON.stringify(text2));
+////////////////////////////////////
