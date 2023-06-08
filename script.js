@@ -438,3 +438,128 @@ console.log(duplicates);
 
 // console.log(JSON.stringify(text2));
 ////////////////////////////////////
+// const str = "Hello, world!";
+// const result = str.indexOf("world");
+// console.log(result);
+
+// const sentence =
+//   "I love JavaScript. JavaScript is the best programming language.";
+// const targetString = "JavaScript";
+
+// // Split the sentence into an array of words
+// const words = sentence.split(" ");
+// console.log(words);
+
+// // Filter the array to keep only the words that match the targetString
+// const matches = words.filter((word) => word === targetString);
+// console.log(matches);
+
+// // Get the count of matches
+// const count = matches.length;
+
+// console.log(
+//   `The string "${targetString}" appears ${count} times in the sentence.`
+// );
+
+// const str = "I have 3 apples and 5 oranges.";
+// const number = 5;
+
+// // Create a regular expression to match the number
+// const regex = new RegExp(number, "g");
+
+// // Use the search() method with the regex to find the index of the number
+// const index = str.search(regex);
+
+// if (index !== -1) {
+//   console.log(`Number ${number} found at index ${index}`);
+// } else {
+//   console.log(`Number ${number} not found`);
+// }
+////////////////////////////////////
+//object advanced
+// const person = {
+//   fname: " John",
+//   lname: " Doe ",
+//   age: 25,
+// };
+
+// person.nationality = " Bangladeshi";
+// delete person.age;
+
+// // object property uses for in loop
+// let text = "";
+// for (const x in person) {
+//   text += person[x];
+// }
+
+// console.log(text);
+
+//object property
+// const myObj = {
+//   name: "John",
+//   age: 30,
+//   cars: [
+//     { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+//     { name: "BMW", models: ["320", "X3", "X5"] },
+//     { name: "Fiat", models: ["500", "Panda"] },
+//   ],
+// };
+
+// for (const x in myObj.cars) {
+//   console.log(myObj.cars[x]);
+// }
+
+// console.log(myObj.cars[0].name);
+
+//Object method
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   id: 5566,
+// };
+
+// person.fullName = function () {
+//   return this.firstName + " " + this.lastName;
+// };
+// console.log(person.fullName());
+
+//Display object
+// const person = {
+//   name: "John ",
+//   age: 30,
+//   city: " New York",
+// };
+
+// text = "";
+// for (const x in person) {
+//   text += person[x];
+// }
+// document.getElementById("demo").innerHTML = text;
+
+// Object constructor function and prototype
+// function Person(first, last, age, eye) {
+//   this.firstName = first;
+//   this.lastName = last;
+//   this.age = age;
+//   this.eyeColor = eye;
+//   this.fullName = function () {
+//     return this.firstName + " " + this.lastName;
+//   };
+// }
+
+// Person.prototype.address = function () {
+//   return "I am from  Gopalganj";
+// };
+
+// const hasan = new Person("Hasan", "Khan", 25, "black");
+// const sumit = new Person("sumit", "shaha", 32, "brown");
+// const milon = new Person("milon", "molla", 30, "black");
+
+// hasan.result = "3.75";
+
+// console.log(hasan.address());
+// console.log(hasan.result);
+
+// console.log(hasan);
+// console.log(sumit);
+// console.log(milon);
