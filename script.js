@@ -475,7 +475,7 @@ console.log(duplicates);
 // } else {
 //   console.log(`Number ${number} not found`);
 // }
-////////////////////////////////////
+///////////////////////////////////////
 //object advanced
 // const person = {
 //   fname: " John",
@@ -563,3 +563,48 @@ console.log(duplicates);
 // console.log(hasan);
 // console.log(sumit);
 // console.log(milon);
+
+//iterable
+//const numbers = [1, 2, 3]; //iterable
+// const nums = {
+//   one: 1,
+//   two: 2,
+//   three: 3,
+// };
+
+// const numIterator = numbers[Symbol.iterator]();
+// console.log(numIterator.next());
+// console.log(numIterator.next());
+// console.log(numIterator.next());
+// console.log(numIterator.next());
+// console.dir(nums);
+
+//sets
+// const letters = new Set(["a", "b", "c"]);
+
+// letters.forEach(function (value) {
+//   console.log(value);
+// });
+
+// const letterIterator = letters.values();
+
+// for (const x of letters) {
+//   console.log(x);
+// }
+
+// Create a Map
+// const fruits = new Map([
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200],
+// ]);
+
+// fruits.set("jack-fruits", 600);
+// console.log(fruits.get("apples"));
+
+// console.log(fruits);
+
+// fruits.forEach(function (value, key) {
+//   console.log(key, "=", value);
+// });
+///////////////////////////////////////
