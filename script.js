@@ -607,4 +607,103 @@ console.log(duplicates);
 // fruits.forEach(function (value, key) {
 //   console.log(key, "=", value);
 // });
+
+///////////////////////////////////////
+//function
+
+//function declaration
+// function a() {
+//   console.log("I am function declaration");
+// }
+
+// //function expression
+// const b = function () {
+//   console.log("I am function expression");
+// };
+
+//invoked function or self called function
+// (function a() {
+//   console.log("I am function invoke");
+// })();
+
+// Arrow function
+// const c = (x, y) => x * y;
+// const arrowNew = c(5, 6);
+// console.log(arrowNew);
+
+// function myFunction(x) {
+//   x.one = 5;
+//   console.log(x.one + x.two);
+// }
+
+// const m = {
+//   one: 1,
+//   two: 2,
+// };
+// myFunction(m);
+
+//this manually set
+//array call
+// const person = {
+//   fullName: function (city, country) {
+//     return this.firstName + " " + this.lastName + " " + city + " " + country;
+//   },
+// };
+// const person1 = {
+//   firstName: "John",
+//   lastName: "Doe",
+// };
+// const person2 = {
+//   firstName: "Mary",
+//   lastName: "Doe",
+// };
+
+// const newPerson = person.fullName.call(person1, "Dhaka", "Bangladesh");
+// console.log(newPerson);
+
+//array apply
+// const person = {
+//   fullName: function (city, country) {
+//     return this.firstName + " " + this.lastName + " " + city + " " + country;
+//   },
+// };
+// const person1 = {
+//   firstName: "John",
+//   lastName: "Doe",
+// };
+// const person2 = {
+//   firstName: "Mary",
+//   lastName: "Doe",
+// };
+
+// const newPerson = person.fullName.apply(person1, ["Dhaka", "Bangladesh"]);
+// console.log(newPerson);
+// console.log(person);
+
+// const maxValue = Math.max.apply(null, [5, 6, 7]);
+// console.log(maxValue);
+
+//Closer
+// let a = 4;
+// function myFunction() {
+//   return a * a;
+// }
+
+// Initiate counter
+//let counter = 0;
+
+// Function to increment counter
+// function add() {
+//   console.log((counter += 1));
+// }
+// add();
+// add();
+// add();
+
+// function add() {
+//   let counter = 0;
+//   return function plus() {
+//     counter += 1;
+//   };
+// }
 ///////////////////////////////////////
