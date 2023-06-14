@@ -707,3 +707,17 @@ console.log(duplicates);
 //   };
 // }
 ///////////////////////////////////////
+//class
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  run(speed) {
+    console.log("Car is running in " + speed);
+  }
+}
+
+const bmw = new Car("BMW", 2015);
+console.log(bmw);
+bmw.run("120 km per hour");
