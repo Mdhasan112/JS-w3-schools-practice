@@ -708,16 +708,41 @@ console.log(duplicates);
 // }
 ///////////////////////////////////////
 //class
-class Car {
-  constructor(name, year) {
-    this.name = name;
-    this.year = year;
-  }
-  run(speed) {
-    console.log("Car is running in " + speed);
-  }
-}
+// class Car {
+//   constructor(name, year) {
+//     this.name = name;
+//     this.year = year;
+//   }
+//   run(speed) {
+//     console.log("Car is running in " + speed);
+//   }
+// }
+// const bmw = new Car("BMW", 2015);
+// console.log(bmw);
+// bmw.run("120 km per hour");
 
-const bmw = new Car("BMW", 2015);
-console.log(bmw);
-bmw.run("120 km per hour");
+//class inheritance
+// class Car {
+//   constructor(brand) {
+//     this.carname = brand;
+//   }
+//   present() {
+//     return "I have a " + this.carname;
+//   }
+// }
+
+// class Model extends Car {
+//   constructor(brand, mod) {
+//     super(brand);
+//     this.model = mod;
+//   }
+//   show() {
+//     return this.present() + ", it is a " + this.model;
+//   }
+// }
+
+// let myCar = new Model("Ford", "Mustang");
+
+// console.log(myCar);
+// console.log(myCar.show());
+///////////////////////////////////////
