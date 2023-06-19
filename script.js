@@ -746,3 +746,61 @@ console.log(duplicates);
 // console.log(myCar);
 // console.log(myCar.show());
 ///////////////////////////////////////
+//Async await
+//Callback
+
+// function myDisplay(some) {
+//   console.log(some);
+// }
+// function myCalculator(num1, num2, Callback) {
+//   const sum = num1 + num2;
+//   Callback(sum);
+// }
+
+// myCalculator(10, 5, function (result) {
+//   console.log(result);
+// });
+
+//asynchronous
+// console.log("Line 1 code");
+
+// setTimeout(function () {
+//   console.log("line 2 code");
+// }, 1000);
+
+// console.log("Line 3 code");
+
+//Callback Pattern
+const paymentsuccess = true;
+const marks = 70;
+
+function enroll(callback) {
+  console.log("Course enrollment is in  progress");
+
+  setTimeout(function () {
+    if (paymentsuccess) {
+      callback();
+    } else {
+      console.log("Your payment is failed");
+    }
+  }, 2000);
+}
+
+function progress(callback) {
+  console.log("Course on progress...");
+
+  setTimeout(function () {
+    if (marks >= 80) {
+      callback();
+    } else {
+      console.log("You did't get the certifictad");
+    }
+  }, 3000);
+}
+
+function certificate() {
+  console.log("Welcome! You got the certificate");
+}
+enroll(function () {
+  progress(certificate);
+});
