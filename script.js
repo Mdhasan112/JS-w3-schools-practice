@@ -769,38 +769,122 @@ console.log(duplicates);
 // }, 1000);
 
 // console.log("Line 3 code");
-
+/////////////////
 //Callback Pattern
-const paymentsuccess = true;
-const marks = 70;
+// const paymentsuccess = true;
+// const marks = 70;
 
-function enroll(callback) {
+// function enroll(callback) {
+//   console.log("Course enrollment is in  progress");
+
+//   setTimeout(function () {
+//     if (paymentsuccess) {
+//       callback();
+//     } else {
+//       console.log("Your payment is failed");
+//     }
+//   }, 2000);
+// }
+
+// function progress(callback) {
+//   console.log("Course on progress...");
+
+//   setTimeout(function () {
+//     if (marks >= 80) {
+//       callback();
+//     } else {
+//       console.log("You did't get the certifictad");
+//     }
+//   }, 3000);
+// }
+
+// function certificate() {
+//   console.log("Welcome! You got the certificate");
+// }
+
+// enroll(function () {
+//   progress(certificate);
+// });
+///////////////////
+//promise
+// const taskSuccess = true;
+
+// console.log("Task 1 done");
+
+// //promise defination
+// const promise = new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     if (taskSuccess) {
+//       resolve("task 2 done");
+//     } else {
+//       reject("failed");
+//     }
+//   }, 2000);
+// });
+
+// //promise call
+// promise
+//   .then(function (value) {
+//     console.log(value);
+//   })
+//   .catch(function (err) {
+//     console.log(err);
+//   });
+
+// console.log("Task 3 done");
+
+/////////////////
+const paymentsuccess = true;
+const marks = 90;
+
+function enroll() {
   console.log("Course enrollment is in  progress");
 
-  setTimeout(function () {
-    if (paymentsuccess) {
-      callback();
-    } else {
-      console.log("Your payment is failed");
-    }
-  }, 2000);
-}
+  const promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      if (paymentsuccess) {
+        resolve();
+      } else {
+        reject("Your payment is failed");
+      }
+    }, 2000);
+  });
 
-function progress(callback) {
+  return promise;
+}
+function progress() {
   console.log("Course on progress...");
 
-  setTimeout(function () {
-    if (marks >= 80) {
-      callback();
-    } else {
-      console.log("You did't get the certifictad");
-    }
-  }, 3000);
+  const promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      if (marks >= 80) {
+        resolve();
+      } else {
+        reject("You did't get the certifictad");
+      }
+    }, 3000);
+  });
+
+  return promise;
+}
+function getCertificate() {
+  console.log("Preparing your certificate");
+
+  const promise = new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve("Congrats!, You got the certificate");
+    }, 1000);
+  });
+
+  return promise;
 }
 
-function certificate() {
-  console.log("Welcome! You got the certificate");
-}
-enroll(function () {
-  progress(certificate);
-});
+enroll()
+  .then(progress)
+  .then(getCertificate)
+  .then(function (value) {
+    console.log(value);
+  })
+  .catch(function (err) {
+    console.log(err);
+  });
