@@ -805,6 +805,7 @@ console.log(duplicates);
 // enroll(function () {
 //   progress(certificate);
 // });
+
 ///////////////////
 //promise
 // const taskSuccess = true;
@@ -834,6 +835,7 @@ console.log(duplicates);
 // console.log("Task 3 done");
 
 /////////////////
+
 const paymentsuccess = true;
 const marks = 90;
 
@@ -879,12 +881,30 @@ function getCertificate() {
   return promise;
 }
 
-enroll()
-  .then(progress)
-  .then(getCertificate)
-  .then(function (value) {
-    console.log(value);
-  })
-  .catch(function (err) {
-    console.log(err);
-  });
+// //promise;
+// enroll()
+//   .then(progress)
+//   .then(getCertificate)
+//   .then(function (value) {
+//     console.log(value);
+//   })
+//   .catch(function (err) {
+//     console.log(err);
+//   });
+
+///////////////
+// //Async Await
+// async function course() {
+//   try {
+//     await enroll();
+//     await progress();
+//     const result = await getCertificate();
+
+//     console.log(result);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+// course();
+///////////////////////////////////////
