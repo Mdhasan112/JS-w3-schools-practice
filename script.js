@@ -908,3 +908,16 @@ function getCertificate() {
 
 // course();
 ///////////////////////////////////////
+//form
+const element = document.getElementById("demo");
+element.innerHTML = `Today's date is: ${new Date()} `;
+
+// function validateForm() {
+//   const form = document.forms["myForm"];
+//   const value = form["fname"].value;
+
+//   if (value === "") {
+//     alert("You must input a name");
+//     return false;
+//   }
+// }
