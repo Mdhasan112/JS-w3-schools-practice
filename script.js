@@ -921,3 +921,38 @@ element.innerHTML = `Today's date is: ${new Date()} `;
 //     return false;
 //   }
 // }
+////////////////
+// function changeEvent() {
+//   const title = document.getElementById("title");
+//   title.innerHTML = "hello world";
+// }
+
+// const button = document.getElementById("title");
+// button.addEventListener(
+//   "click",
+//   function () {
+//     console.log("Hello World!");
+//   },
+//   true
+// );
+
+// const container = document.getElementById("container");
+// container.addEventListener(
+//   "click",
+//   function () {
+//     console.log("Hello div!");
+//   },
+//   true
+// );
+//////////////////
+// const myID = document.getElementById("myId");
+// const random = document.getElementById("random");
+// myID.addEventListener("mousemove", myFunc);
+
+// function myFunc() {
+//   random.innerHTML = Math.random();
+// }
+
+// function removeHandler() {
+//   myID.removeEventListener("mousemove", myFunc);
+// }
