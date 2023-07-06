@@ -922,6 +922,7 @@ element.innerHTML = `Today's date is: ${new Date()} `;
 //   }
 // }
 ////////////////
+
 // function changeEvent() {
 //   const title = document.getElementById("title");
 //   title.innerHTML = "hello world";
@@ -945,6 +946,7 @@ element.innerHTML = `Today's date is: ${new Date()} `;
 //   true
 // );
 //////////////////
+
 // const myID = document.getElementById("myId");
 // const random = document.getElementById("random");
 // myID.addEventListener("mousemove", myFunc);
@@ -956,3 +958,39 @@ element.innerHTML = `Today's date is: ${new Date()} `;
 // function removeHandler() {
 //   myID.removeEventListener("mousemove", myFunc);
 // }
+//////////////////
+
+// const demo2 = document.getElementById("demo2");
+
+// const way1 = demo2.innerHTML;
+// const way2 = demo2.firstChild.nodeValue;
+// const way3 = demo2.childNodes[0].nodeValue;
+
+// console.log(way3);
+/////////////////
+//create HTML element
+// const para = document.createElement("p");
+// const node = document.createTextNode("HELLO WORLD");
+
+// para.appendChild(node);
+
+// const newDiv = document.getElementById("div1");
+// newDiv.appendChild(para);
+
+// const p1 = document.getElementById("p1");
+// newDiv.insertBefore(para, p1);
+
+//Remmove HTML element
+// const p2 = document.getElementById("p2");
+// p2.remove();
+
+//or browser frienddly
+// const p2 = document.getElementById("p2");
+
+// newDiv.removeChild(p2);
+
+//Replacing HTML Elements
+// const p2 = document.getElementById("p2");
+
+// newDiv.replaceChild(para, p2);
+/////////////////
