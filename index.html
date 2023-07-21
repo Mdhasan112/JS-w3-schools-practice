@@ -60,7 +60,7 @@
       <input type="button" value="prompt" onclick="showPrompt()" />
     </div>
 
-    <div>
+    <div id="timming">
       <input type="button" value="setTimeout" onclick="createSetTimeout()" />
       <br />
       <input type="button" value="remveTimeout" onclick="removeSetTimeout()" />
@@ -72,6 +72,26 @@
         value="removeSetinterval"
         onclick="removeSetInterval()"
       />
+    </div>
+
+    <div>
+      <input type="button" value="set name cookie" />
+    </div>
+    <div>
+      <input type="button" value="set UserName cookie" />
+    </div>
+    <div>
+      <input type="button" value="get name cookie" />
+    </div>
+    <div>
+      <input type="button" value="get userNamecookie" />
+    </div>
+
+    <div class="mg">
+      <input id="inputId" type="number" min="100" max="300" required />
+      <button onclick="validation()">OK</button>
+
+      <p id="demoShow"></p>
     </div>
 
     <script src="script.js"></script>

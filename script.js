@@ -995,6 +995,8 @@ element.innerHTML = `Today's date is: ${new Date()} `;
 // newDiv.replaceChild(para, p2);
 ////////////////////////////////////////
 //BOM
+//alert, confirm, prompt
+
 const id1 = document.getElementById("id1");
 const id2 = document.getElementById("id2");
 
@@ -1024,7 +1026,8 @@ function showPrompt() {
   id2.innerHTML = txt;
 }
 
-////////////////////////////////////
+///////////////////
+//timming event
 let time;
 function createSetTimeout() {
   time = setTimeout(function () {
@@ -1044,4 +1047,26 @@ function createSetInterval() {
 }
 function removeSetInterval() {
   clearInterval(liveTime);
+}
+///////////////////
+//cookies
+
+///////////////////////////////////
+//API
+//form validation
+function validation() {
+  const inputObj = document.getElementById("inputId");
+  const demoShow = document.getElementById("demoShow");
+
+  if (inputObj.validity.rangeOverflow) {
+    inputObj.setCustomValidity("Value must be less then 300!");
+  } else if (inputObj.validity.rangeUnderflow) {
+    inputObj.setCustomValidity("Value must be grather then 100!");
+  } else if (inputObj.validity.valueMissing) {
+    inputObj.setCustomValidity("Value missing!");
+  }
+
+  if (!inputObj.checkValidity()) {
+    demoShow.innerHTML = inputObj.validationMessage;
+  }
 }
