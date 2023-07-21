@@ -993,4 +993,55 @@ element.innerHTML = `Today's date is: ${new Date()} `;
 // const p2 = document.getElementById("p2");
 
 // newDiv.replaceChild(para, p2);
-/////////////////
+////////////////////////////////////////
+//BOM
+const id1 = document.getElementById("id1");
+const id2 = document.getElementById("id2");
+
+function showAlert() {
+  window.alert("Hello World");
+}
+
+function showConfirm() {
+  let txt;
+  if (confirm("Your message goes here")) {
+    txt = "You pressed ok!";
+  } else {
+    txt = "You pressed cancel!";
+  }
+  id1.innerHTML = txt;
+}
+
+function showPrompt() {
+  const person = prompt("Please enter your name", "hasan");
+
+  let txt;
+  if (person === null || person === "") {
+    txt = "User cancelled then prompt";
+  } else {
+    txt = person;
+  }
+  id2.innerHTML = txt;
+}
+
+////////////////////////////////////
+let time;
+function createSetTimeout() {
+  time = setTimeout(function () {
+    id1.innerHTML = "2 seconds over";
+  }, 2000);
+}
+
+function removeSetTimeout() {
+  clearTimeout(time);
+}
+
+let liveTime;
+function createSetInterval() {
+  liveTime = setInterval(function () {
+    id2.innerHTML = new Date().toLocaleTimeString();
+  }, 1000);
+}
+function removeSetInterval() {
+  clearInterval(liveTime);
+}
