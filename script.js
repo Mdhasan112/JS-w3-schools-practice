@@ -909,8 +909,8 @@ function getCertificate() {
 // course();
 ///////////////////////////////////////
 //form
-const element = document.getElementById("demo");
-element.innerHTML = `Today's date is: ${new Date()} `;
+// const element = document.getElementById("demo");
+// element.innerHTML = `Today's date is: ${new Date()}`;
 
 // function validateForm() {
 //   const form = document.forms["myForm"];
@@ -1068,5 +1068,68 @@ function validation() {
 
   if (!inputObj.checkValidity()) {
     demoShow.innerHTML = inputObj.validationMessage;
+  }
+}
+
+//////////////////
+//History API
+function backs() {
+  window.history.back();
+}
+function backTo() {
+  window.history.go(-2);
+}
+function forward() {
+  history.forward();
+}
+function getHiastory() {
+  alert(window.history.length);
+}
+
+//////////////////
+//local storage
+function setLocalStorage(key, value) {
+  localStorage.setItem(key, value);
+}
+function getLocalStorage(key) {
+  alert(localStorage.getItem(key));
+}
+function getLocalStorageLength() {
+  alert(localStorage.length);
+}
+function removeLocalStorage(key) {
+  localStorage.removeItem(key);
+}
+function clearLocalStorage() {
+  localStorage.clear();
+}
+
+///////////////////////
+//Web Worker API
+
+let myWorker;
+
+function startWorker() {
+  if (typeof Worker !== "undefined") {
+    //if worker not define
+    if (typeof myWorker === "undefined") {
+      //creating new worker
+      myWorker = new Worker("worker.js");
+
+      myWorker.onmessage = function (event) {
+        document.getElementById("loop").innerHTML = event.data;
+      };
+    }
+  } else {
+    alert("Sorry! No Web Worker support..");
+  }
+}
+
+function stopWorker() {
+  if (typeof Worker !== "undefined") {
+    myWorker.terminate();
+    myWorker = undefined;
+  } else {
+    alert("Sorry! No Web Worker support..");
   }
 }

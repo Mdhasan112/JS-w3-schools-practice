@@ -94,6 +94,31 @@
       <p id="demoShow"></p>
     </div>
 
+    <a href="one.html">Page One</a>
+
+    <div class="mg">
+      <button onclick="setLocalStorage('name', 'hasan')">
+        set local storage
+      </button>
+      <br />
+      <button onclick="getLocalStorage('name')">get local storage</button>
+      <br />
+      <button onclick=" getLocalStorageLength()">local storage length</button>
+      <br />
+      <button onclick="removeLocalStorage('name')">remove local storage</button>
+      <br />
+      <button onclick="clearLocalStorage()">clear local storage</button>
+    </div>
+
+    <div>
+      <button onclick="startWorker()">Start worker</button>
+      <br />
+      <button onclick="stopWorker()">Stop worker</button>
+      <br />
+      <button onclick="alert('hello world')">Click</button>
+      <p id="loop"></p>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
