@@ -1133,3 +1133,70 @@ function stopWorker() {
     alert("Sorry! No Web Worker support..");
   }
 }
+/////////////////////
+//Web GeoLoaction API
+const display = document.getElementById("display");
+
+let watchId;
+//get location
+function getGeoLocation() {
+  if (navigator.geolocation) {
+    //get current possition
+    //navigator.geolocation.getCurrentPosition(showPosition, showError);
+
+    //get live current possition
+    watchId = navigator.geolocation.watchPosition(showPosition, showError);
+  } else {
+    display.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+//clear location
+function clearGeoLocation() {
+  navigator.geolocation.clearWatch(watchId);
+}
+
+//location function
+function showPosition(position) {
+  display.innerHTML =
+    "Latitude: " +
+    position.coords.latitude +
+    "<br>Longitude: " +
+    position.coords.longitude;
+}
+
+//location error function
+function showError(error) {
+  switch (error.code) {
+    case error.PERMISSION_DENIED:
+      display.innerHTML = "User denied the request for Geolocation.";
+      break;
+    case error.POSITION_UNAVAILABLE:
+      display.innerHTML = "Location information is unavailable.";
+      break;
+    case error.TIMEOUT:
+      display.innerHTML = "The request to get user location timed out.";
+      break;
+    case error.UNKNOWN_ERROR:
+      display.innerHTML = "An unknown error occurred.";
+      break;
+  }
+}
+///////////////////////////////////////
+//AJAX
+function loadData() {
+  //creating ajax request
+  const xhr = new XMLHttpRequest();
+
+  //what to do when response arrive
+  xhr.onload = function () {
+    const container = document.getElementById("demo5");
+    container.innerHTML = xhr.responseText;
+  };
+
+  //prepare request
+  xhr.open("Get", "/ajax.txt");
+
+  //sent request
+  xhr.send();
+}
