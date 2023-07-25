@@ -1183,6 +1183,7 @@ function showError(error) {
   }
 }
 ///////////////////////////////////////
+///////////////////////////////////////
 //AJAX
 function loadData() {
   //creating ajax request
@@ -1200,3 +1201,62 @@ function loadData() {
   //sent request
   xhr.send();
 }
+
+//AJAX example
+function sentRequest(method, url, data) {
+  const promise = new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+
+    xhr.onload = function () {
+      //handle application error
+      if (this.status >= 400) {
+        reject(
+          `There was an application error. The response status is ${this.status} not found!`
+        );
+      }
+      resolve(this.response);
+    };
+
+    xhr.onerror = function () {
+      reject("There was an error");
+    };
+
+    xhr.open(method, url);
+
+    xhr.responseType = "json";
+
+    xhr.send(data);
+  });
+
+  return promise;
+}
+
+function getData() {
+  sentRequest("GET", "https://jsonplaceholder.typicode.com/todos/1")
+    .then(responseData => {
+      console.log(responseData);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
+
+function sentData() {
+  sentRequest(
+    "POST",
+    "https://jsonplaceholder.typicode.com/posts",
+    JSON.stringify({
+      title: "foo",
+      body: "bar",
+      userId: 1,
+    })
+  ).then(responseData => {
+    console.log(responseData);
+  });
+}
+
+const getButton = document.getElementById("get");
+const sentButton = document.getElementById("sent");
+
+getButton.addEventListener("click", getData);
+sentButton.addEventListener("click", sentData);
